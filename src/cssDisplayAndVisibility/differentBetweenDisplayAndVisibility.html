@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>different Between Display And Visibility</title>
+		<style>
+			h1.visibilityHidden {
+				visibility: hidden;
+			}
+			
+			h1.displayHidden {
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>Visibility可见标题</h1>
+		<h1 class="visibilityHidden">Visibility隐藏标题</h1>
+		<p>PS: visibility:hidden时仍然占用空间</p>
+		<h1>Display可见标题</h1>
+		<h1 class="displayHidden">display</h1>
+		<p>PS: display:none时不占用空间</p>
+	</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title> css Box Model </title>
+		<style>
+			div {
+				background-color: lightgray;
+				width: 300px;
+				border: 25px solid green;
+				padding: 25px;
+				margin: 25px;
+			}
+			div.ex{
+				width: 220px;
+				padding: 10px;
+				border: 5px solid yellow;
+				margin: 0px;
+				
+			}
+		</style>
+	</head>
+
+	<body>
+		<h2>box model demo</h2>
+		<p>CSS 盒模型本质上是一个盒子，封装周围的元素，包括：Margin(边距)，Border(边框)，Padding(内边距/填充)和Content(实际内容)</p>
+		<div>盒子内的内容包括:25px外边距，25px绿色边框,25px内边框,300px宽内容</div>
+		
+		<img src="http://www.runoob.com/try/demo_source/w3css.gif" width="250" height="250" />
+		<div class="ex">上面图片宽是250px 这个元素也是</div>
+	</body>
+</html>
