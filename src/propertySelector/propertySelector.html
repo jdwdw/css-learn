@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title> Property Selector </title>
+		<style>
+			[title] {
+				color: blue;
+			}
+			
+			[title=with] {
+				border: 5px solid green;
+			}
+			
+			[title~=multiple] {
+				border: 5px solid red;
+			}
+			
+			[lang|=en] {
+				color: red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1 title="title">with title property</h1>
+		<a title="title" href="http://www.runoob.com/try/try.php?filename=trycss_attselector_att">link have title property</a>
+		<h1>without title property</h1>
+
+		<h1 title="with">with title=with property</h1>
+		<h1 title="title with multiple">with title="with title multiple" property</h1>
+
+		<p lang="en">lang=en</p>
+		<p lang="en-us">lang=en-us</p>
+		<p lang="us">lang=us</p>
+	</body>
+
+</html>
