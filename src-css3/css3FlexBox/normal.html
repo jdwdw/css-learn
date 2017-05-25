@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title> flex box simple demo</title>
+		<style>
+			.flex-container {
+				display: -webkit-flex;
+				display: flex;
+				width: 400px;
+				height: 250px;
+				background-color: lightgreen;
+			}
+			
+			.flex-container-row-reverse {
+				display: -webkit-flex;
+				display: flex;
+				-webkit-flex-direction: row-reverse;
+				flex-direction: row-reverse;
+				width: 400px;
+				height: 250px;
+				background-color: lightgreen;
+			}
+			
+			.flex-container-column {
+				display: -webkit-flex;
+				display: flex;
+				-webkit-flex-direction: column;
+				flex-direction: column;
+				width: 400px;
+				height: 250px;
+				background-color: lightgreen;
+			}
+			
+			.flex-item {
+				background-color: cornflowerblue;
+				width: 100px;
+				height: 100px;
+				margin: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>flex normal (row/水平左对齐)</h1>
+		<div class="flex-container">
+			<div class="flex-item">flex item1 </div>
+			<div class="flex-item">flex item2 </div>
+			<div class="flex-item">flex item3 </div>
+		</div>
+		<h1>flex row-reverse (row-reverse/水平右对齐)</h1>
+		<div class="flex-container-row-reverse">
+			<div class="flex-item">flex item1 </div>
+			<div class="flex-item">flex item2 </div>
+			<div class="flex-item">flex item3 </div>
+		</div>
+		<h1>flex column (column/纵向向下)</h1>
+		<div class="flex-container-column">
+			<div class="flex-item">flex item1 </div>
+			<div class="flex-item">flex item2 </div>
+			<div class="flex-item">flex item3 </div>
+		</div>
+	</body>
+
+</html>

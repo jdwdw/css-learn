@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title> align-content</title>
+		<style>
+			.flex-container-align-content_stretch {
+				display: -webkit-flex;
+				display: flex;
+				-webkit-flex-wrap: wrap;
+				flex-wrap: wrap;
+				-webkit-align-content: stretch;
+				align-content: stretch;
+				width: 300px;
+				height: 250px;
+				background-color: lightgray;
+			}
+			
+			.flex-item {
+				background-color: cornflowerblue;
+				width: 100px;
+				height: 100px;
+				margin: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>align-content:stretch</h1>
+		<div class="flex-container-align-content_stretch">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+		</div>
+	</body>
+
+</html>

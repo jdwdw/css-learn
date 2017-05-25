@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>background</title>
+		<style>
+			#no-clip {
+				border: 10px dotted black;
+				padding: 35px;
+				background: yellow;
+			}
+			
+			#clip-padding {
+				border: 10px dotted black;
+				padding: 35px;
+				background: yellow;
+				background-clip: padding-box;
+			}
+			
+			#clip-content {
+				border: 10px dotted black;
+				padding: 35px;
+				background: yellow;
+				background-clip: content-box;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="no-clip">no-clip</div>
+		<p>-------------------------</p>
+		<div id="clip-padding">clip-padding</div>
+		<p>-------------------------</p>
+		<div id="clip-content">clip-content</div>
+	</body>
+
+</html>

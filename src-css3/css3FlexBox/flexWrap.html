@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title> flex-wrap</title>
+		<style>
+			.flex-container-flex-wrap_nowrap {
+				display: -webkit-flex;
+				display: flex;
+				-webkit-flex-wrap: nowrap;
+				flex-wrap: nowrap;
+				width: 300px;
+				height: 250px;
+				background-color: lightgray;
+			}
+			
+			.flex-container-flex-wrap_wrap {
+				display: -webkit-flex;
+				display: flex;
+				-webkit-flex-wrap: wrap;
+				flex-wrap: wrap;
+				width: 300px;
+				height: 250px;
+				background-color: lightgray;
+			}
+			
+			.flex-container-flex-wrap_wrap-reverse {
+				display: -webkit-flex;
+				display: flex;
+				-webkit-flex-wrap: wrap-reverse;
+				flex-wrap: wrap-reverse;
+				width: 300px;
+				height: 250px;
+				background-color: lightgray;
+			}
+			
+			.flex-item {
+				background-color: cornflowerblue;
+				width: 100px;
+				height: 100px;
+				margin: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>flex-wrap:nowrap</h1>
+		<div class="flex-container-flex-wrap_nowrap">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+		</div>
+		<h1>flex-wrap:wrap</h1>
+		<div class="flex-container-flex-wrap_wrap">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+		</div>
+		<h1>flex-wrap:wrap-reverse</h1>
+		<div class="flex-container-flex-wrap_wrap-reverse">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+		</div>
+	</body>
+
+</html>

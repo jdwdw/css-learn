@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>transition</title>
+		<style>
+			div {
+				width: 100px;
+				height: 100px;
+				background: red;
+				-webkit-transform: width 2s, height 2s, -webkit-transform 2s;
+				transition: width 2s, height 2s, transform 2s;
+			}
+			
+			div:hover {
+				width: 200px;
+				height: 200;
+				-webkit-transform: rotate(180deg);
+				transform: rotate(180deg);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div>hover</div>
+	</body>
+
+</html>

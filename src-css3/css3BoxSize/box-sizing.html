@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>box-sizing</title>
+		<style>
+			.without-box-sizing .div1 {
+				width: 300px;
+				height: 100px;
+				border: 1px solid blue;
+			}
+			
+			.without-box-sizing .div2 {
+				width: 300px;
+				height: 100px;
+				padding: 50px;
+				border: 1px solid red;
+			}
+			
+			.with-box-sizing .div1 {
+				width: 300px;
+				height: 100px;
+				border: 1px solid blue;
+				box-sizing: border-box;
+			}
+			
+			.with-box-sizing .div2 {
+				width: 300px;
+				height: 100px;
+				padding: 50px;
+				border: 1px solid red;
+				box-sizing: border-box;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="without-box-sizing">
+			<div class="div1">
+				without-box-sizing(width:300px,height:100px)
+			</div>
+			<br>
+			<div class="div2">
+				without-box-sizing(width:300px,height:100px)
+			</div>
+		</div>
+		<br>
+		<div class="with-box-sizing">
+			<div class="div1">
+				with-box-sizing(width:300px,height:100px)
+			</div>
+			<br>
+			<div class="div2">
+				with-box-sizing(width:300px,height:100px)
+			</div>
+		</div>
+	</body>
+
+</html>

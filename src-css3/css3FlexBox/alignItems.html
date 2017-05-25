@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>align-items</title>
+		<style>
+			.flex-container-align-items_stretch {
+				display: -webkit-flex;
+				display: flex;
+				-webkit-align-items: stretch;
+				align-items: stretch;
+				width: 400px;
+				height: 250px;
+				background-color: lightgray;
+			}
+			
+			.flex-container-align-items_flex-start {
+				display: -webkit-flex;
+				display: flex;
+				-webkit-align-items: flex-start;
+				align-items: flex-start;
+				width: 400px;
+				height: 250px;
+				background-color: lightgray;
+			}
+			
+			.flex-container-align-items_flex-end {
+				display: -webkit-flex;
+				display: flex;
+				-webkit-align-items: flex-end;
+				align-items: flex-end;
+				width: 400px;
+				height: 250px;
+				background-color: lightgray;
+			}
+			
+			.flex-container-align-items_center {
+				display: -webkit-flex;
+				display: flex;
+				-webkit-align-items: center;
+				align-items: center;
+				width: 400px;
+				height: 250px;
+				background-color: lightgray;
+			}
+			
+			.flex-container-align-items_baseline {
+				display: -webkit-flex;
+				display: flex;
+				-webkit-align-items: baseline;
+				align-items: baseline;
+				width: 400px;
+				height: 250px;
+				background-color: lightgray;
+			}
+			
+			.flex-item {
+				background-color: cornflowerblue;
+				width: 100px;
+				margin: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>align-items:stretch</h1>
+		<div class="flex-container-align-items_stretch">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+		</div>
+		<h1>align-items:flex-start</h1>
+		<div class="flex-container-align-items_flex-start">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+		</div>
+		<h1>align-items:flex-end</h1>
+		<div class="flex-container-align-items_flex-end">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+		</div>
+		<h1>align-items:center</h1>
+		<div class="flex-container-align-items_center">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+		</div>
+		<h1>align-items:baseline</h1>
+		<div class="flex-container-align-items_baseline">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>css3 border</title>
+		<style>
+			div.border-radius {
+				border: 2px solid #a1a1a1;
+				padding: 10px 40px;
+				background: #dddddd;
+				width: 300px;
+				border-radius: 25px;
+			}
+			
+			div.box-shadow {
+				width: 300px;
+				height: 100px;
+				background-color: yellow;
+				box-shadow: 10px 10px 5px #888888;
+			}
+			
+			div.border-image {
+				border: 15px solid transparent;
+				width: 250px;
+				padding: 10px 20px;
+			}
+			
+			#round {
+				-webkit-border-image: url(http://www.runoob.com/images/border.png) 30 30 round;
+				-moz-border-image: url(http://www.runoob.com/images/border.png) 30 30 round;
+				border-image: url(http://www.runoob.com/images/border.png) 30 30 round;
+			}
+			
+			#stretch {
+				-webkit-border-image: url(http://www.runoob.com/images/border.png) 30 30 stretch;
+				-moz-border-image: url(http://www.runoob.com/images/border.png) 30 30 stretch;
+				border-image: url(http://www.runoob.com/images/border.png) 30 30 stretch;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="border-radius">border-radius 属性设置元素为圆角边框</div>
+		<div class="box-shadow"></div>
+		<div class="border-image" id="round">图像平铺填充区域</div>
+		<div class="border-image" id="stretch">图像拉伸填充区域</div>
+	</body>
+
+</html>

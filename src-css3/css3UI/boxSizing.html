@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title> box-sizing</title>
+		<style>
+			div.container {
+				width: 30em;
+				border: 1em solid;
+			}
+			
+			div.box {
+				box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				width: 50%;
+				border: 1em solid red;
+				float: left;
+				color: green;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="box">half </div>
+			<div class="box">another half</div>
+		</div>
+	</body>
+
+</html>
