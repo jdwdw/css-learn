@@ -5,11 +5,77 @@
 		<meta charset="UTF-8">
 		<title> flexboxLayout</title>
 		<style>
-
+			.flex-container {
+				display: -webkit-flex;
+				display: flex;
+				-webkit-flex-flow: row wrap;
+				flew-flow: row wrap;
+				font-weight: bold;
+				text-align: center;
+			}
+			
+			.flex-container>* {
+				padding: 10px;
+				flex: 1 100%;
+			}
+			
+			.main {
+				text-align: left;
+				background: cornflowerblue;
+			}
+			
+			.header {
+				background: coral;
+			}
+			
+			.footer {
+				background: lightgreen;
+			}
+			
+			.aside1 {
+				background: moccasin;
+			}
+			
+			.aside2 {
+				background: violet;
+			}
+			
+			@media all and (min-width:600px) {
+				.aside {
+					flex: 1 auto
+				}
+			}
+			
+			@media all and (min-width:800px) {
+				.main {
+					flex: 3;
+				}
+				.aside1 {
+					order: 1;
+				}
+				.main {
+					order: 2;
+				}
+				.aside2 {
+					order: 3;
+				}
+				.footer {
+					order: 4;
+				}
+			}
 		</style>
 	</head>
 
 	<body>
+		<div class="flex-container">
+			<header class="header">header</header>
+			<article class="main">
+				<p>this is the main</p>
+			</article>
+			<aside class="aside aside1"> aside left</aside>
+			<aside class="aside aside2">aside right</aside>
+			<footer class="footer">footer</footer>
+		</div>
 	</body>
 
 </html>

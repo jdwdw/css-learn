@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Login</title>
+		<style>
+			html {
+				height: 100%;
+			}
+			
+			body {
+				background: rgb(236, 236, 236);
+				height: 100%;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-flex-direction: column;
+				flex-direction: column;
+				-webkit-justify-content: space-between;
+				justify-content: space-between;
+			}
+			
+			.container {
+				width: 100%;
+				height: 100%;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-flex-direction: column;
+				flex-direction: column;
+				-webkit-justify-content: space-between;
+				justify-content: space-between;
+			}
+			
+			* {
+				box-sizing: border-box;
+			}
+			
+			.header {
+				background: rgb(51, 153, 255);
+				color: white;
+				padding: 15px;
+				width: 100%;
+			}
+			
+			.headerComponent {
+				width: 100%;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-justify-content: space-between;
+				justify-content: space-between;
+			}
+			
+			.connent {
+				width: 100%;
+			}
+			
+			.connentComponent {
+				width: 100%;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-flex-direction: column;
+				flex-direction: column;
+				-webkit-justify-content: space-between;
+				justify-content: space-between;
+			}
+			
+			.inputComponent {
+				background: rgb(255, 255, 255);
+				border-bottom: 1px solid rgb(236, 236, 236);
+				/*				height: 50px;*/
+			}
+			
+			.inputComponent input {
+				border-style: hidden;
+			}
+			
+			.connentComponentItem {
+				width: 100%;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-justify-content: space-between;
+				justify-content: space-between;
+				align-items: center;
+			}
+			
+			.threePartyLogin .img {
+				-webkit-justify-content: space-around;
+				justify-content: space-around;
+			}
+			
+			.connentComponentItem span {
+				padding-left: 10px;
+				height: 50px;
+				padding-top: 15px;
+				text-align: center;
+			}
+			
+			.connentComponentItem input {
+				height: 50px;
+				text-align: center;
+			}
+			
+			.connent .threePartyLogin {
+				text-align: center;
+			}
+			
+			.threePartyLogin .title {
+				color: rgb(153, 153, 153);
+			}
+			
+			.loginButton {
+				background-color: rgb(204, 204, 204);
+				border: none;
+				color: white;
+				padding: 15px 32px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 4px 2px;
+				cursor: pointer;
+				width: 90%;
+				border-radius: 3%;
+			}
+			
+			.litteButton {
+				border-style: hidden;
+				color: rgb(110, 192, 246);
+				background-color: rgb(236, 236, 236);
+			}
+			
+			.loginButtonActive {
+				background-color: greenyellow;
+			}
+			
+			[class*="col-"] {
+				float: left;
+				padding: 15px;
+				width: 100%;
+			}
+			
+			img {
+				width: 20%;
+				height: auto;
+			}
+			
+			.colHeight-m-1 {
+				height: 8.33%;
+			}
+			
+			.colHeight-m-2 {
+				height: 16.66%;
+			}
+			
+			.colHeight-m-3 {
+				height: 25%;
+			}
+			
+			.colHeight-m-4 {
+				height: 33.33%;
+			}
+			
+			.colHeight-m-5 {
+				height: 41.66%;
+			}
+			
+			.colHeight-m-6 {
+				height: 50%;
+			}
+			
+			.colHeight-m-7 {
+				height: 58.33%;
+			}
+			
+			.colHeight-m-8 {
+				height: 66.66%;
+			}
+			
+			.colHeight-m-9 {
+				height: 75%;
+			}
+			
+			.colHeight-m-10 {
+				height: 83.33%;
+			}
+			
+			.colHeight-m-11 {
+				height: 91.66%;
+			}
+			
+			.colHeight-m-12 {
+				height: 100%;
+			}
+			
+			@media only screen and (min-width: 600px) {
+				/* For tablets: */
+				.col-m-1 {
+					width: 8.33%;
+				}
+				.col-m-2 {
+					width: 16.66%;
+				}
+				.col-m-3 {
+					width: 25%;
+				}
+				.col-m-4 {
+					width: 33.33%;
+				}
+				.col-m-5 {
+					width: 41.66%;
+				}
+				.col-m-6 {
+					width: 50%;
+				}
+				.col-m-7 {
+					width: 58.33%;
+				}
+				.col-m-8 {
+					width: 66.66%;
+				}
+				.col-m-9 {
+					width: 75%;
+				}
+				.col-m-10 {
+					width: 83.33%;
+				}
+				.col-m-11 {
+					width: 91.66%;
+				}
+				.col-m-12 {
+					width: 100%;
+				}
+			}
+			
+			@media only screen and (min-width: 768px) {
+				/* For desktop: */
+				.col-1 {
+					width: 8.33%;
+				}
+				.col-2 {
+					width: 16.66%;
+				}
+				.col-3 {
+					width: 25%;
+				}
+				.col-4 {
+					width: 33.33%;
+				}
+				.col-5 {
+					width: 41.66%;
+				}
+				.col-6 {
+					width: 50%;
+				}
+				.col-7 {
+					width: 58.33%;
+				}
+				.col-8 {
+					width: 66.66%;
+				}
+				.col-9 {
+					width: 75%;
+				}
+				.col-10 {
+					width: 83.33%;
+				}
+				.col-11 {
+					width: 91.66%;
+				}
+				.col-12 {
+					width: 100%;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<script>
+			function changeInputValue() {
+				if(document.getElementById("inputPhoneNumber ").value && document.getElementById("inputPassword ").value) {
+					document.getElementById("loginButton ").classList.add("loginButtonActive");
+				} else {
+					document.getElementById("loginButton ").classList.remove("loginButtonActive");
+				}
+
+			}
+		</script>
+
+		<div class="header colHeight-m-1">
+			<div class="headerComponent"><span><</span><span>登录</span><span></span></div>
+		</div>
+		<div class="colHeight-m-1"></div>
+		<div class="connent colHeight-m-5">
+			<div class="connentComponent">
+				<div class="inputComponent">
+					<div class="connentComponentItem">
+						<span ">手机号</span><input id="inputPhoneNumber " placeholder="请输入您的手机号 " onkeyup="changeInputValue() "><span></span></input>
+					</div>
+				</div>
+				<div class="inputComponent ">
+					<div class="connentComponentItem "><span>密码</span><input id="inputPassword " placeholder="请输入您的密码 " onkeyup="changeInputValue() "><span></span></input>
+					</div>
+				</div>
+				<br>
+				<div class="connentComponentItem ">
+					<div></div>
+					<button class="loginButton " id="loginButton ">登录</button>
+					<div></div>
+				</div>
+				<div class="connentComponentItem ">
+					<button class="leftLittleButton litteButton ">注册帐号</button>
+					<button class="rightLittleButton litteButton ">忘记密码?</button>
+				</div>
+			</div>
+		</div>
+		<div class="colHeight-m-1 "></div>
+		<div class="connent colHeight-m-4 ">
+			<div class="threePartyLogin ">
+				<h3 class="title ">第三方帐号登录</h3>
+				<div class="connentComponentItem img ">
+					<img src="../../img/weixin.png " />
+					<img src="../../img/QQ.png " />
+					<img src="../../img/weibo.png " />
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
