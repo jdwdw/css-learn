@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, userscalable=false">
+		<title>home page</title>
+		<style media="screen">
+			body {
+				background: rgb(236, 236, 236);
+				margin: 0px;
+			}
+			
+			* {
+				box-sizing: border-box;
+			}
+			
+			.col-1 {
+				width: 8.33%;
+			}
+			
+			.col-2 {
+				width: 16.66%;
+			}
+			
+			.col-3 {
+				width: 25%;
+			}
+			
+			.col-4 {
+				width: 33%;
+			}
+			
+			.col-5 {
+				width: 41.66%;
+			}
+			
+			.col-6 {
+				width: 50%;
+			}
+			
+			.col-7 {
+				width: 58.33%;
+			}
+			
+			.col-8 {
+				width: 66.66%;
+			}
+			
+			.col-9 {
+				width: 75%;
+			}
+			
+			.col-10 {
+				width: 83.33%;
+			}
+			
+			.col-11 {
+				width: 91.66%;
+			}
+			
+			.col-12 {
+				width: 100%;
+			}
+			
+			[class *="col-"] {
+				float: left;
+				padding: 0.25em;
+			}
+			
+			.row::after {
+				content: "";
+				clear: both;
+				display: block;
+			}
+			
+			.searchBar {
+				padding-top: 0.9375em;
+				background-color: #0066FF;
+			}
+			
+			.areaName {
+				width: 100%;
+				display: inline-block;
+				padding-left: 10%;
+				color: white;
+				position: relative;
+			}
+			
+			.area {
+				display: inline-block;
+			}
+			
+			.area::after {
+				content: '';
+				position: absolute;
+				border-style: solid;
+				border-width: 0.4375em;
+				border-color: white transparent transparent transparent;
+				top: 35%;
+				left: 50%;
+			}
+			
+			.search {
+				width: 100%;
+				background-color: white;
+				border-radius: 50%;
+			}
+			
+			.search input {
+				padding: 0px 15px 0px 35px;
+				border: none;
+				border-radius: 15px;
+				background: #fff url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495795272889&di=c8816f304e53a0565d1e32eddfc8290e&imgtype=0&src=http%3A%2F%2Fimg2.web07.cn%2FUpPic%2FPng%2F201506%2F08%2F5076940809192449.png") no-repeat 15px 50%;
+				background-size: 15px auto;
+				width: 100%;
+				height: 30px;
+				font-size: 0.5em;
+				line-height: 30px;
+				outline: 0;
+			}
+			
+			.addcar {
+				width: 100%;
+				display: inline-block;
+				color: white;
+				position: relative;
+			}
+			
+			.add {
+				display: inline-block;
+			}
+			
+			.add::after {
+				content: '';
+				position: absolute;
+				border-style: solid;
+				border-width: 7px;
+				border-color: transparent transparent transparent white;
+				top: 30%;
+				left: 80%;
+			}
+			
+			.connent {
+				padding-top: 0.9375em;
+				background: white;
+				margin-bottom: 10px;
+			}
+			
+			.check {
+				height: 200px;
+			}
+			
+			.carCheck {
+				width: 100%;
+				height: 100%;
+			}
+			
+			.discription {
+				width: 100%;
+				height: 40%;
+			}
+			
+			.title {
+				margin-bottom: 0.5em;
+			}
+			
+			.title span:nth-child(2n+1) {
+				font-size: 1.4em;
+			}
+			
+			.title span:nth-child(2n) {
+				vertical-align: baseline;
+				display: inline-block;
+				background-color: red;
+				color: white;
+				font-size: 0.7em;
+				padding-left: 0.5em;
+				padding-right: 0.5em;
+				border-radius: 0.5em 0.5em 0.5em 0.5em;
+				font-weight: bold;
+			}
+			
+			.online {
+				font-size: 0.3em;
+				color: grey;
+			}
+			
+			.carCheck_pic {
+				width: 100%;
+				height: 50%;
+			}
+			
+			.carCheck_pic img {
+				width: 100%;
+				height: 100%
+			}
+			
+			.listCheck {
+				width: 100%;
+				height: 60%;
+				margin-bottom: 1.75em;
+			}
+			
+			.list {
+				display: inline-block;
+				width: 60%;
+				height: 100%;
+			}
+			
+			.list span:nth-child(2n+1) {
+				display: block;
+				text-align: center;
+				height: 50%;
+				padding-bottom: 1em;
+			}
+			
+			.list span:nth-child(2n) {
+				display: block;
+				height: 50%;
+				font-size: 0.5em;
+				color: grey;
+			}
+			
+			.listPic {
+				display: inline-block;
+				width: 35%;
+				height: 100%;
+			}
+			
+			.listPic img {
+				width: 100%;
+				height: 100%;
+			}
+			
+			.baoyangtu_unit {
+				display: inline-block;
+				width: 23%;
+				font-size: 0.8em;
+				text-align: center;
+			}
+			
+			.baoyang {
+				background: white;
+			}
+			
+			.baoyangtu {
+				margin-bottom: 1em;
+			}
+			
+			.baoyangtu_img img {
+				width: 80%;
+				height: auto;
+			}
+			
+			.wenzhen {
+				display: inline-block;
+				font-size: 1.5em;
+				color: #0066FF;
+				text-align: center;
+			}
+			
+			.wenzhendongtai {
+				border-top: 0.5px solid grey;
+				display: inline-block;
+				color: grey;
+				font-size: 0.8em;
+			}
+			
+			.wenzhendongtai img {
+				padding-top: 0.5em;
+				width: 9%;
+				height: auto;
+				vertical-align: bottom;
+			}
+			
+			.wenzhendongtai span {
+				padding-right: 1em;
+				vertical-align: middle;
+			}
+			
+			.tiwen {
+				margin-top: 1em;
+			}
+			
+			.zuixintiwen img {
+				width: 1em;
+				height: auto;
+				vertical-align: middle;
+			}
+			
+			.zuixintiwen div {
+				display: inline-block;
+			}
+			
+			.zuixintiwen div:nth-child(2n) {
+				width: 75%;
+				text-align: right;
+			}
+			
+			.wenti {
+				margin-top: 1em;
+				padding-top: 0.5em;
+				border-top: 0.5px solid grey;
+			}
+			
+			.wenti_pic img {
+				width: 80%;
+				border-radius: 50%;
+			}
+			
+			.xinxi {
+				margin-bottom: 0.5em;
+			}
+			
+			.xinxi span {
+				margin-right: 1%;
+			}
+			
+			.xinxi img {
+				width: 5%;
+				height: auto;
+			}
+			
+			.diqu {
+				font-size: 0.8em;
+				color: grey;
+				margin-bottom: 0.5em;
+			}
+			
+			.diqu img {
+				vertical-align: text-bottom;
+			}
+			
+			.pinglun {
+				margin-bottom: 0.5em;
+			}
+			
+			.pingluntupian {
+				width: 100%;
+				margin-bottom: 0.5em;
+			}
+			
+			.pingluntupian img {
+				width: 20%;
+				height: auto;
+			}
+			
+			.shijian div {
+				display: inline-block;
+			}
+			
+			.pinglunshijian {
+				font-size: 0.5em;
+				width: 25%;
+				color: grey;
+			}
+			
+			.pinglunshuliang {
+				text-align: right;
+				font-size: 0.5em;
+				width: 70%;
+				color: grey;
+			}
+			
+			.pinglunshuliang img {
+				width: 7%;
+				height: auto;
+			}
+			
+			.bottom_bar {
+				margin-top: 1em;
+				border-top: 1px solid rgb(236, 236, 236);
+				font-size: 0.6em;
+				position: fixed;
+				bottom: 0px;
+				background: white;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-justify-content: space-around;
+				justify-content: space-around;
+				align-items: center;
+			}
+			
+			.bottom_bar_unit {
+				text-align: center;
+				color: grey;
+			}
+			
+			.bottom_bar_unit_fisrt {
+				/*        margin-left: 10%;*/
+				color: #0066FF;
+				text-align: center;
+			}
+			
+			.bottom_bar_img. {
+				width: 100%;
+			}
+			
+			.bottom_bar_img img {
+				width: 45%;
+				height: auto;
+			}
+			
+			.carousel {
+				margin-bottom: 0.5em;
+			}
+			
+			.carousel_content {
+				height: 150px;
+			}
+			
+			.carousel_display {
+				width: 100%;
+				height: 100%;
+				position: relative;
+				overflow: hidden;
+			}
+			
+			#content {
+				top: 0%;
+				right: 0%;
+				width: 300%;
+				height: 100%;
+				margin-left: 0%;
+				animation-name: myfirst;
+				animation-duration: 15s;
+				animation-timing-function: ease;
+				animation-delay: 0s;
+				animation-iteration-count: infinite;
+				animation-direction: alternate;
+				animation-play-state: running;
+			}
+			
+			@keyframes myfirst {
+				0% {
+					margin-left: 0%;
+					animation-play-state: paused;
+				}
+				20% {
+					margin-left: 0%;
+					animation-play-state: running;
+				}
+				40% {
+					margin-left: -100%;
+					animation-play-state: paused;
+				}
+				60% {
+					margin-left: -100%;
+					animation-play-state: running;
+				}
+				80% {
+					margin-left: -200%;
+					animation-play-state: paused;
+				}
+				100% {
+					margin-left: -200%;
+					animation-play-state: running;
+				}
+			}
+			
+			#content img {
+				float: left;
+				width: 33.3%;
+				height: 100%;
+			}
+			
+			#point {
+				top: 80%;
+				left: 40%;
+				position: absolute;
+				width: 100%;
+			}
+			
+			#point div {
+				display: inline-block;
+				z-index: 1;
+				width: 0.5em;
+				height: 0.5em;
+				border: 0.5em solid rgba(0, 0, 0, 0.5);
+				border-radius: 50%;
+			}
+			
+			#point1 {
+				animation-name: point1;
+				animation-duration: 15s;
+				animation-timing-function: ease;
+				animation-delay: 0s;
+				animation-iteration-count: infinite;
+				animation-direction: alternate;
+				animation-play-state: running;
+			}
+			
+			@keyframes point1 {
+				0% {
+					border-color: rgb(255, 255, 255);
+					animation-play-state: paused;
+				}
+				20% {
+					border-color: rgb(255, 255, 255);
+					animation-play-state: running;
+				}
+				40% {
+					border-color: rgba(0, 0, 0, 0.5);
+					animation-play-state: paused;
+				}
+				60% {
+					border-color: rgba(0, 0, 0, 0.5);
+					animation-play-state: running;
+				}
+				80% {
+					border-color: rgba(0, 0, 0, 0.5);
+					animation-play-state: paused;
+				}
+				100% {
+					border-color: rgba(0, 0, 0, 0.5);
+					animation-play-state: running;
+				}
+			}
+			
+			#point2 {
+				animation-name: point2;
+				animation-duration: 15s;
+				animation-timing-function: ease;
+				animation-delay: 0s;
+				animation-iteration-count: infinite;
+				animation-direction: alternate;
+				animation-play-state: running;
+			}
+			
+			@keyframes point2 {
+				0% {
+					border-color: rgba(0, 0, 0, 0.5);
+					animation-play-state: paused;
+				}
+				20% {
+					border-color: rgba(0, 0, 0, 0.5);
+					animation-play-state: running;
+				}
+				40% {
+					border-color: rgb(255, 255, 255);
+					animation-play-state: paused;
+				}
+				60% {
+					border-color: rgb(255, 255, 255);
+					animation-play-state: running;
+				}
+				80% {
+					border-color: rgba(0, 0, 0, 0.5);
+					animation-play-state: paused;
+				}
+				100% {
+					border-color: rgba(0, 0, 0, 0.5);
+					animation-play-state: running;
+				}
+			}
+			
+			#point3 {
+				animation-name: point3;
+				animation-duration: 15s;
+				animation-timing-function: ease;
+				animation-delay: 0s;
+				animation-iteration-count: infinite;
+				animation-direction: alternate;
+				animation-play-state: running;
+			}
+			
+			@keyframes point3 {
+				0% {
+					border-color: rgba(0, 0, 0, 0.5);
+					animation-play-state: paused;
+				}
+				20% {
+					border-color: rgba(0, 0, 0, 0.5);
+					animation-play-state: running;
+				}
+				40% {
+					border-color: rgba(0, 0, 0, 0.5);
+					animation-play-state: paused;
+				}
+				60% {
+					border-color: rgba(0, 0, 0, 0.5);
+					animation-play-state: running;
+				}
+				80% {
+					border-color: rgb(255, 255, 255);
+					animation-play-state: paused;
+				}
+				100% {
+					border-color: rgb(255, 255, 255);
+					animation-play-state: running;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="row searchBar">
+			<div class="col-3">
+				<span class="areaName"><span class="area">广州</span></span>
+			</div>
+			<div class="col-6">
+				<div class="search">
+					<input type="text" name="" value="" placeholder="搜索你感兴趣的信息">
+				</div>
+			</div>
+			<div class="col-3">
+				<span class="addcar"><span class="add">添加爱车</span></span>
+			</div>
+		</div>
+		<div class="row connent">
+			<div class="col-5 check">
+				<div class="carCheck">
+					<div class="discription">
+						<div class="title">
+							<span>汽车问诊</span>
+							<span>免费</span>
+						</div>
+						<div class="online">
+							2000名专业技师，在线答疑
+						</div>
+					</div>
+					<div class="carCheck_pic">
+						<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495799357608&di=e2d59bbaa6089e27bfb82e3c24701ada&imgtype=0&src=http%3A%2F%2Fpic30.photophoto.cn%2F20140317%2F0038038099473769_b.jpg" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="col-7">
+				<div class="listCheck">
+					<div class="list">
+						<span>清单核实</span>
+						<span>维保亏不亏，一核便知道</span>
+					</div>
+					<div class="listPic">
+						<img src="http://car2.autoimg.cn/cardfs/product/g18/M00/E6/B7/1024x0_1_q87_autohomecar__wKgH2VefkJWAWrTwAAbAY_cvnOo799.jpg" alt="">
+					</div>
+				</div>
+				<div class="listCheck">
+					<div class="list">
+						<span>保养周期表</span>
+						<span>要不要保养，事实说了算</span>
+					</div>
+					<div class="listPic">
+						<img src="http://www.mapeng.net/Files/UpLoadfiles/20080428liu/mapeng_motor%20(36).jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row baoyang connent">
+			<div class="col-12 baoyangtu">
+				<div class="baoyangtu_unit">
+					<div class="baoyangtu_img">
+						<img src="../../img/首页.png" alt="">
+					</div>
+					保养比价
+				</div>
+				<div class="baoyangtu_unit">
+					<div class="baoyangtu_img">
+						<img src="../../img/首页2.png" alt="">
+					</div>
+					易损件比价
+				</div>
+				<div class="baoyangtu_unit">
+					<div class="baoyangtu_img">
+						<img src="../../img/首页3.png" alt="">
+					</div>
+					维修比价
+				</div>
+				<div class="baoyangtu_unit">
+					<div class="baoyangtu_img">
+						<img src="../../img/首页4.png" alt="">
+					</div>
+					加装比价
+				</div>
+			</div>
+			<div class="col-12 wenzhendongtai">
+				<span class="wenzhen">问诊动态</span>
+				<img src="../../img/naba.png" alt="">
+				<span>车主王小明</span>
+				<span>提出了一个问诊问题</span>
+			</div>
+		</div>
+		<div class="row carousel">
+			<div class="col-12 carousel_content">
+				<div class="carousel_display">
+					<div id="content">
+						<img src="http://cdn1.yikuaixiu.com/media_01.png" alt="">
+						<img src="http://cdn1.yikuaixiu.com/cover_1.png" alt="">
+						<img src="http://cdn1.yikuaixiu.com/cover_2.png" alt="">
+					</div>
+					<div id="point">
+						<div id="point1">
+
+						</div>
+						<div id="point2">
+
+						</div>
+						<div id="point3">
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row connent">
+			<div class="row tiwen">
+				<div class="col-12 zuixintiwen">
+					<div><img src="../../img/首页5.png" alt=""> 最新提问</div>
+					<div>查看更多></div>
+				</div>
+			</div>
+			<div class="row wenti">
+				<div class="col-2 wenti_pic">
+					<img src="http://www.chinanews.com/cr/2014/0611/2961532466.jpg" alt="">
+				</div>
+				<div class="col-10">
+					<div class="xinxi">
+						<span>王先生</span>
+						<span><img src="../../img/首页6.png" alt=""></span>
+						<span>路虎极光</span>
+					</div>
+					<div class="diqu">
+						<img src="../../img/首页7.png" alt=""> 广州
+					</div>
+					<div class="pinglun">
+						新买的极光，开着我的汽车电瓶一回就没电了，和引擎有关系嘛？请问我该怎么办？
+					</div>
+					<div class="pingluntupian">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8P_jYyapYxA4F5S8bS-4QaO8GufOus0Bdh7barxWZBM8g4g6gcw2ppQ" alt="">
+					</div>
+					<div class="shijian">
+						<div class="pinglunshijian">
+							3分钟前
+						</div>
+						<div class="pinglunshuliang">
+							<span><img src="../../img/首页8.png" alt=""></span>
+							<span>17</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row wenti">
+				<div class="col-2 wenti_pic">
+					<img src="http://www.chinanews.com/cr/2014/0611/2961532466.jpg" alt="">
+				</div>
+				<div class="col-10">
+					<div class="xinxi">
+						<span>陈晓梅</span>
+						<span><img src="../../img/首页9.png" alt=""></span>
+						<span>路虎极光</span>
+					</div>
+					<div class="diqu">
+						<img src="../../img/首页7.png" alt=""> 广州
+					</div>
+					<div class="pinglun">
+						新买的极光，开着我的汽车电瓶一回就没电了，和引擎有关系嘛？请问我该怎么办？
+					</div>
+					<div class="shijian">
+						<div class="pinglunshijian">
+							20分钟前
+						</div>
+						<div class="pinglunshuliang">
+							<span><img src="../../img/首页8.png" alt=""></span>
+							<span>5</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="height: 30px">
+
+		</div>
+		<div class="row">
+			<div class="bottom_bar col-12">
+				<div class="bottom_bar_unit_fisrt">
+					<div class="bottom_bar_img">
+						<img src="../../img/首页10.png" alt="">
+					</div>
+					首页
+				</div>
+				<div class="bottom_bar_unit">
+					<div class="bottom_bar_img">
+						<img src="../../img/首页11.png" alt="">
+					</div>
+					问诊
+				</div>
+				<div class="bottom_bar_unit">
+					<div class="bottom_bar_img">
+						<img src="../../img/首页12.png" alt="">
+					</div>
+					比价
+				</div>
+				<div class="bottom_bar_unit">
+					<div class="bottom_bar_img">
+						<img src="../../img/首页13.png" alt="">
+					</div>
+					发现
+				</div>
+				<div class="bottom_bar_unit">
+					<div class="bottom_bar_img">
+						<img src="../../img/首页14.png" alt="">
+					</div>
+					我的
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
